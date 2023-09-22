@@ -31,5 +31,6 @@ jobs:
           local_dir: ./dist/
           remote_dir: public_html/
           delete: "false"
+          ftp_ssl_allow: true
 
         
