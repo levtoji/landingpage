@@ -23,11 +23,13 @@ jobs:
     - name: Trunk build
       run: trunk build --verbose
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: airvzxf/ftp-deployment-action@latest
       with:
-        server: www392.your-server.de
-        username: perschn@www392.your-server.de
-        local-dir: ./dist/
-        server-dir: public_html/
-        password: ${{ secrets.ftp_password }}
+          server: www392.your-server.de
+          user: perschn@www392.your-server.de
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./dist/
+          remote-dir: public_html/
+          delete: "false"
+
         
