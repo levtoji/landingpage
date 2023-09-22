@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install trunk
+      run: cargo install trunk
     - name: Trunk build
       run: trunk build --verbose
     - name: 📂 Sync files
