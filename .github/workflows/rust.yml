@@ -20,4 +20,9 @@ jobs:
       run: cargo build --verbose
     - name: Run tests
       run: cargo test --verbose
-      
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: www392.your-server.de
+        username: perschn
+        password: ${{ secrets.ftp_password }}
