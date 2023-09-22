@@ -26,10 +26,10 @@ jobs:
       uses: airvzxf/ftp-deployment-action@latest
       with:
           server: www392.your-server.de
-          user: perschn@www392.your-server.de
+          user: perschn
           password: ${{ secrets.ftp_password }}
-          local-dir: ./dist/
-          remote-dir: public_html/
+          local_dir: ./dist/
+          remote_dir: public_html/
           delete: "false"
 
         
