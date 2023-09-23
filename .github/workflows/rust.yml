@@ -1,0 +1,45 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    - name: Install trunk
+      run: cargo install trunk
+    - name: Install wasm target
+      run: rustup target add wasm32-unknown-unknown
+    - name: Trunk build
+      run: trunk build --verbose
+    - name: 📂 Sync files
+      uses: airvzxf/ftp-deployment-action@latest
+      with:
+          server: www392.your-server.de
+          user: perschn
+          password: ${{ secrets.ftp_password }}
+          local_dir: ./dist/
+          remote_dir: public_html/
+          delete: "false"
+          ftp_ssl_allow: true
+
+        
