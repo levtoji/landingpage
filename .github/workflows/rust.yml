@@ -26,7 +26,7 @@ jobs:
           target/
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
     - name: Install trunk
-      run: cargo install trunk
+      run: cargo install trunk --force
     - name: Install wasm target
       run: rustup target add wasm32-unknown-unknown
     - name: Trunk build
