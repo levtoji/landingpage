@@ -7,13 +7,11 @@ use yew::prelude::*;
 
 #[function_component]
 fn App() -> Html {
-    wasm_logger::init(wasm_logger::Config::default());
-
     html! {
     <>
     <ParticleLoader />
     <div class="grid place-items-center h-screen">
-    <div class="w-9/12 p-6 bg-white rounded-xl shadow-lg flex items-center bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
+    <div class="w-9/12 p-6 m-6 bg-white rounded-xl shadow-lg flex items-center bg-gradient-to-r from-orange-400 via-red-500 to-pink-500">
       <div class="space-y-4 drop-shadow-md">
         <div class="text-xl font-medium text-slate-100 text-center">{"Lev Perschin"}</div>
         <p class="text-slate-100">{"Welcome, I am a computer science student, currently working on my master thesis. For many years I worked in the university as a programmer, mostly using C# in the Unity Engine and Java for Android. Currently, I play around with Rust, which already is one of my favorites."}</p>
@@ -25,21 +23,21 @@ fn App() -> Html {
         </div>
 
         <div class="space-x-1 space-y-1 flex flex-wrap text-sm items-baseline m-auto">
-            <Pill text="Rust" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="C# (Unity)" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="Python" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="Java (Android)" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="C/C++" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="PHP" color="bg-lime-500" hover_color="hover:bg-lime-700"/>
-            <Pill text="HTML" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="CSS (Pure, Tailwind)" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="XML/YAML" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="Git" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="Augmented Reality" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="Virtual Reality" color="bg-red-500" hover_color="hover:bg-red-700"/>
-            <Pill text="Blender" color="bg-yellow-500" hover_color="hover:bg-yellow-700"/>
-            <Pill text="AutoCAD" color="bg-yellow-500" hover_color="hover:bg-yellow-700"/>
-            <Pill text="FreeCAD" color="bg-yellow-500" hover_color="hover:bg-yellow-700"/>
+            <Pill text="Rust" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="C# (Unity)" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="Python" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="Java (Android)" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="C/C++" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="PHP" color="bg-lime-500" hover_color="hover:bg-lime-600"/>
+            <Pill text="HTML" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="CSS (Pure, Tailwind)" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="XML/YAML" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="Git" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="Augmented Reality" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="Virtual Reality" color="bg-red-500" hover_color="hover:bg-red-600"/>
+            <Pill text="Blender" color="bg-yellow-500" hover_color="hover:bg-yellow-600"/>
+            <Pill text="AutoCAD" color="bg-yellow-500" hover_color="hover:bg-yellow-600"/>
+            <Pill text="FreeCAD" color="bg-yellow-500" hover_color="hover:bg-yellow-600"/>
         </div>
       </div>
     </div>
