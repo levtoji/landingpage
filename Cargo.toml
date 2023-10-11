@@ -8,6 +8,6 @@ edition = "2021"
 [dependencies]
 gloo = "0.8.0"
 uuid = { version = "1.3.0", features = ["js"] }
-yew = { version = "0.20.0", features = ["csr"] }
+yew = { version = "0.21.0", features = ["csr"] }
 rand = "0.8.5"
 wasm-logger = "0.2.0"
